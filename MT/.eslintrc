@@ -1,0 +1,53 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "globals": {
+    "__DEV__": false,
+    "__PROD__": false
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "build/webpack.base.conf.js"
+      }
+    }
+  },
+  "extends": "standard",
+  "plugins": [
+    "html" // required to lint *.vue files
+  ],
+  "rules": {
+    "arrow-parens": 0, // allow paren-less arrow functions
+    "generator-star-spacing": 0, // allow async-await
+    "camelcase": [0, { "properties": "always" }],
+    // enable additional rules
+    "indent": [2, 2, { "SwitchCase": 1 }],
+    "quotes": [2, "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
+    "semi": [2, "never"],
+    "semi-spacing": [2, { "before": false, "after": true }],
+    "space-before-function-paren": ["warn", "always"],
+    "curly": [2, "multi-line"],
+    "spaced-comment": [2, "always", { "markers": ["global", "globals", "eslint", "eslint-disable", "*package", "!", ","] }],
+    // override default options for rules from base configurations
+    "comma-dangle": [1, "never"],
+
+    // disable rules from base configurations
+    "no-console": "off",
+    "no-cond-assign": ["error", "always"],
+    "no-eval": 2,
+    "no-with": 2,
+    "no-multiple-empty-lines": [2, { "max": 1 }],
+    "no-extend-native": 2,
+    "one-var": [2, { "initialized": "never" }]
+
+
+  }
+}
