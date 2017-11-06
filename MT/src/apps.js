@@ -4,6 +4,8 @@ import router from '@/router'
 import App from './App'
 
 import EventBus from '@/common/bus'
+import '@/common/rem'
+import '@/common/fastclick'
 import * as filters from './filters' // 全局filter
 import '@/mock'
 

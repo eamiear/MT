@@ -1,0 +1,80 @@
+/**  */
+$blue: #3190e8;
+$bc: #e4e4e4;
+$fc: #fff;
+
+// background url and size
+@mixin bis($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+@mixin borderRadius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// position fullscreen
+@mixin allcover{
+  position:absolute;
+  top:0;
+  right:0;
+}
+
+//transform: completely center
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+// margin: completely center
+@mixin ctp($width, $height) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -$height/2;
+  margin-left: -$width/2;
+}
+
+// transform: vertical center
+@mixin ct {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// transform: horizontal center
+@mixin cl {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// setting width and height
+@mixin wh($width, $height){
+  width: $width;
+  height: $height;
+}
+
+// font size and  line-height
+@mixin font($size, $line-height, $family: 'Microsoft YaHei') {
+  font: #{$size}/#{$line-height} $family;
+}
+
+// font-size and color
+@mixin sc($size, $color){
+  font-size: $size;
+  color: $color;
+}
+
+//flex layout and children align
+@mixin fj($type: space-between){
+  display: flex;
+  justify-content: $type;
+
+}

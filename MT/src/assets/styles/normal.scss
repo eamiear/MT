@@ -1,0 +1,79 @@
+html {
+  font-size: 62.5%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body, dl, dd,
+ul, ol,
+h1, h2, h3, h4, h5, h6, pre,
+form, fieldset, legend, input, textarea, optgroup,
+p, blockquote, figure, hr, menu, dir,
+thead, tbody, tfoot, th, td
+{
+  margin:0;
+  padding:0;
+}
+
+body,
+input,select,button,textarea
+{
+  font:12px/1.5 'microsoft yahei';
+}
+input,select,textarea{
+  font-size:100%;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  background-color: transparent;
+}
+
+ul, ol {
+  list-style-type: none;
+  list-style-image: none;
+}
+
+
+img,iframe{
+  border:0;
+}
+a {
+  text-decoration:none;
+}
+table{
+  border-collapse:collapse;
+  border-spacing:0;
+}
+caption,th {
+  text-align:left;
+}
+address,cite,dfn,em,var{
+  font-style:normal;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-size:100%;
+  font-weight:500;
+}
+
+q:before,q:after{
+  content:'';
+}
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}

@@ -1,38 +1,55 @@
-import Cookies from 'js-cookie'
 import { AUTHORITY_KEY, USER_TOKEN_KEY, USER_ID_KEY } from '@/common/constants'
 
+export const setStore = (key, value) => {
+  if (!key) return
+  if (typeof value !== 'string') {
+    value = JSON.stringify(value)
+  }
+  window.localStorage.setItem(key, value)
+}
+
+export const getStore = key => {
+  if (!key) return
+  return window.localStorage.getItem(key)
+}
+
+export const removeStore = key => {
+  if (!key) return
+  window.localStorage.removeItem(key)
+}
+
 export function getToken () {
-  return Cookies.get(USER_TOKEN_KEY)
+  return getStore(USER_TOKEN_KEY)
 }
 
 export function setToken (token) {
-  return Cookies.set(USER_TOKEN_KEY, token)
+  return setStore(USER_TOKEN_KEY, token)
 }
 
 export function removeToken () {
-  return Cookies.remove(USER_TOKEN_KEY)
+  removeStore(USER_TOKEN_KEY)
 }
 
 export function getUID () {
-  return Cookies.get(USER_ID_KEY)
+  return getStore(USER_ID_KEY)
 }
 
 export function setUID (uid) {
-  return Cookies.set(USER_ID_KEY, uid)
+  setStore(USER_ID_KEY, uid)
 }
 
 export function removeUID () {
-  return Cookies.remove(USER_ID_KEY)
+  removeStore(USER_ID_KEY)
 }
 
 export function getAuthorityInfo () {
-  return Cookies.get(AUTHORITY_KEY)
+  return getStore(AUTHORITY_KEY)
 }
 
 export function setAuthorityInfo (authInfo) {
-  return Cookies.set(AUTHORITY_KEY, authInfo)
+  setStore(AUTHORITY_KEY, authInfo)
 }
 
 export function removeAuthorityInfo () {
-  return Cookies.remove(AUTHORITY_KEY)
+  removeStore(AUTHORITY_KEY)
 }
